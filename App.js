@@ -1,114 +1,100 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow strict-local
- */
+import React from 'react'
+import { View, Text, StyleSheet } from 'react-native'
 
-import React from 'react';
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native';
 
-import {
-  Header,
-  LearnMoreLinks,
-  Colors,
-  DebugInstructions,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+// 1. Class component - NO MORE
+// 2. Function component
+// 3. Stateless component
+
+// Style
+// 1. Flex
 
 const App = () => {
+
   return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <Header />
-          {global.HermesInternal == null ? null : (
-            <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
-            </View>
-          )}
-          <View style={styles.body}>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Welcome Annisa</Text>
-              <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
-                screen and then come back to see your edits.
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>See Your Changes</Text>
-              <Text style={styles.sectionDescription}>
-                <ReloadInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Debug</Text>
-              <Text style={styles.sectionDescription}>
-                <DebugInstructions />
-              </Text>
-            </View>
-            <View style={styles.sectionContainer}>
-              <Text style={styles.sectionTitle}>Learn More</Text>
-              <Text style={styles.sectionDescription}>
-                Read the docs to discover what to do next:
-              </Text>
-            </View>
-            <LearnMoreLinks />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </>
-  );
-};
+
+    <View
+      style={styles.mainContainer}
+    > 
+      
+      <View
+        style={{
+          flex: 1,
+          backgroundColor: 'blue',
+          justifyContent: 'space-evenly',
+          alignItems: "center",
+          flexDirection: 'row-reverse',
+        }}
+      >
+        
+        <Text
+          style={[
+            styles.primaryTextSytle,
+            styles.helloWorldTextStyle,
+          ]}
+        >
+          Hello World
+        </Text>
+        
+        <Text
+          style={[
+            styles.primaryTextSytle,
+            styles.welcomeToSkolaCodeText,
+          ]}
+        >
+          Welcome to SkolaCode
+        </Text>
+      
+      </View>
+      
+      <View
+        style={{
+          flex: 0.3, 
+          backgroundColor: '#eeeeee',
+          justifyContent: 'flex-end',
+          alignItems: "center",
+          paddingBottom: 10,
+        }}
+      >
+        
+        <Text
+          style={[
+            styles.primaryTextSytle,
+            styles.welcomeToSkolaCodeText,
+            { color: 'black', backgroundColor: '#666666' }
+          ]}
+        >
+          Let's learn flex
+        </Text>
+        
+      </View>
+    </View>
+  )
+}
 
 const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: '#666666',
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 50,
-    fontWeight: "700",
-    color: 'red',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
+  mainContainer: {
+    flex: 1,
 
-export default App;
+    paddingTop: 50,
+    paddingBottom: 20,
+    paddingLeft: 20,
+    paddingRight: 20,
+
+    backgroundColor: 'red',
+  },
+  primaryTextSytle: {
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  helloWorldTextStyle: {
+    color: 'blue',
+    backgroundColor: 'yellow'
+  },
+  welcomeToSkolaCodeText: {
+    color: 'lightblue',
+  },
+})
+
+
+export default App
