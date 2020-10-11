@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { View, Text, StyleSheet } from 'react-native'
 
 
@@ -10,6 +10,12 @@ import { View, Text, StyleSheet } from 'react-native'
 // 1. Flex
 
 const App = () => {
+
+  const [ helloWorldText, setHelloWorldText ] = useState('Hello World')
+
+  const changeHelloWorldText = () => {
+    setHelloWorldText('Hello Annisa')
+  }
 
   return (
 
@@ -23,17 +29,18 @@ const App = () => {
           backgroundColor: 'blue',
           justifyContent: 'space-evenly',
           alignItems: "center",
-          flexDirection: 'row-reverse',
+          flexDirection: 'row',
         }}
       >
         
         <Text
+          onPress={changeHelloWorldText}
           style={[
             styles.primaryTextSytle,
             styles.helloWorldTextStyle,
           ]}
         >
-          Hello World
+          {helloWorldText}
         </Text>
         
         <Text
