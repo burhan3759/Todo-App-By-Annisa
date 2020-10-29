@@ -2,8 +2,6 @@ import * as React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
-import { Text } from 'react-native'
-
 // Note: Pages
 import PageOne from './PageOne'
 import PageTwo from './PageTwo'
