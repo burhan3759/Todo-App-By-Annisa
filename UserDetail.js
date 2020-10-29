@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react'
-import { View, Text , TouchableOpacity} from 'react-native'
+import { View, Text, TouchableOpacity } from 'react-native'
 import { useNavigation, useRoute } from '@react-navigation/native';
 
-export default PageTwo = () => {
-  
+export default UserDetail = () => {
   const navigation = useNavigation()
   const route = useRoute()
 
@@ -29,29 +28,9 @@ export default PageTwo = () => {
 
   return (
     <View>
-      
       <Text>
         Hello {myName}
       </Text>
-      
-      <TouchableOpacity
-        style={{
-          backgroundColor: 'blue',
-          alignItems: 'center',
-          padding: 10,
-          marginTop: 10,
-          width: 110,
-        }}
-        onPress={ () => navigation.navigate('PageThree') }
-      >
-        <Text
-          style={{
-            color: 'white'
-          }}
-        >
-          Go To Page 3
-        </Text>
-      </TouchableOpacity>
     </View>
   )
 }

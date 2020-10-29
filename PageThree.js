@@ -1,38 +1,34 @@
 import React from 'react'
 import { View, Text, TouchableOpacity } from 'react-native'
-
 import { useNavigation } from '@react-navigation/native';
 
-const PageOne = () => {
-
+export default PageThree = () => {
   const navigation = useNavigation()
 
   return (
     <View>
       <Text>
-        Hello Page One
+        Hello Page Three
       </Text>
-      
       <TouchableOpacity
         style={{
-          backgroundColor: 'yellow',
+          backgroundColor: 'red',
           alignItems: 'center',
           padding: 10,
           marginTop: 10,
-          width: 100,
+          width: 200,
+          
         }}
-        onPress={ () => navigation.navigate('PageTwo', {
-          pageTitle: 'Hello Annisa',
-          firstName: 'My ID is 27'
-        }) }
+        onPress={() => navigation.navigate('PageOne')}
       >
-        <Text>
-          Next Page
+        <Text
+          style={{
+            color: 'white'
+          }}
+        >
+          Go To Main Page
         </Text>
       </TouchableOpacity>
-    
     </View>
   )
 }
-
-export default PageOne
