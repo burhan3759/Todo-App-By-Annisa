@@ -25,7 +25,7 @@ ios/tmp.xcconfig
 
 # Android/IntelliJ
 #
-build/
+build
 .idea
 .gradle
 local.properties
