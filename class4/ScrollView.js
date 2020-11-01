@@ -1,7 +1,7 @@
 import React from 'react';
 import { ScrollView, Text, View } from 'react-native';
 
-export default ClassFour = () => {
+export default ScrollView = () => {
   return (
     <ScrollView>
 
