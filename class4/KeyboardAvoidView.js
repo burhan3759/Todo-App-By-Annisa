@@ -4,6 +4,7 @@ import { View, Text, TextInput, KeyboardAvoidingView, Platform } from 'react-nat
 export default AvoidView = () => {
 
   const [ myInput, setMyInput ] = useState('')
+  const [ firsName, setFirsName ] = useState('')
 
   return (
 
