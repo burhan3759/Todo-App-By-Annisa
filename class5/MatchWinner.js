@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useLayoutEffect } from 'react'
-import { View, Text, TouchableOpacity } from 'react-native'
+import { View, Text } from 'react-native'
 import { useNavigation, useRoute } from '@react-navigation/native';
 
 export default MatchWinner = () => {
   const navigation = useNavigation()
   const route = useRoute()
 
-  const { group, teamName } = route.params
+  const { group, teamName } = route.direct
 
   useLayoutEffect(() => {
 
@@ -20,16 +20,17 @@ export default MatchWinner = () => {
 
   useEffect(() => {
 
-    if(route.params) {
-      SetTeamName(group)
+    if(route.direct) {
+   
+      SetTeamName(teamName)
     }
 
-  }, [ route.params ])
+  }, [ route.directs ])
 
   return (
     <View>
       <Text>
-        Hello {myName}
+        Team {myName}
       </Text>
     </View>
   )

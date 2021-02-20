@@ -115,11 +115,11 @@ export default ClassFive = () => {
               width: 400,
               
             }}
-          
+         
             onPress={ () => navigation.navigate('MatchWinner', {
-              
-              group: each.group,
-              teamName: each.awayTeam.name
+             
+              group: 'test',
+              teamName: 'test'
             }) }
           >
             <Text
@@ -127,7 +127,6 @@ export default ClassFive = () => {
                 color: 'white'
               }}
             >
-            {console.log(each.awayTeam.name)}
              {each.awayTeam.name} VS  {each.homeTeam.name}
             </Text>
           </TouchableOpacity>
